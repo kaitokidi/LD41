@@ -11,8 +11,7 @@
 < Yet another three, those humans were doing a great job! 
 < Dos couldn't believe how fast it was going, it seemed to be working, humans were finding targets, and the ancient spell giving Dos the magic, and the love that humans spent on those other trees. 
 < Dos was envious of those trees that didn't have to do anything, they were just found, decorated and loved. They didn't earn it. They did not deserve it! 
-< More magic through its wood. 
-< More magic at the tips of its leaves. 
+< More magic through its wood. More magic at the tips of its leaves. 
 < More magic, more magic taken from other trees. Those trees that did not deserve it... 
 < That tree didn't need this anyway, it was already loved, Dos needed it more. 
 < Dos was looking beautiful, but the warmer it got with the stolen love, the faster the heat was lost in the cold air of Canada. 
@@ -28,4 +27,8 @@ neighbor tree.
 < The energy drain was starting to dry the trees of the forest, and the animals were barely moving from exhaustion. And then, Dos saw its parent, die. Silent, in that state that trees voluntarily change when they have lived enough. Dos always blamed it for doing that step, denying its wisdom and company to the child that was born from its seed. But now for the first time, Dos understood. 
 < This would be the last bunch of magic and life that would be stolen. Dos gave a last look to the old tree, and gave away its will, its perception of the world, and closed himself inside the wood, far away from any interaction, ending like this the evil spell once and for all. 
 < After some time, when someone found that beautiful fantastic tree, they cut it to make a fantastic Christmas tree. 
+< Thank you for playing!
+< This has been done for the Ludum Dare 41. Coding and Art made by Genis Bayona.   The music is the Vision Fugitives Op.22 of Prokofiev, by Boris Berman.
+< Hope you have enjoyed, have a wonderful day!
+< : )
 $

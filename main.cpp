@@ -51,7 +51,7 @@ int main(){
     sf::Text text;
     text.setFont(font);
 
-    sf::RenderWindow window(sf::VideoMode::getDesktopMode(), L"LD41", sf::Style::Close);
+    sf::RenderWindow window(sf::VideoMode::getDesktopMode(), L"LD41-AChristmasTree", sf::Style::Close);
     view.reset(sf::FloatRect(0,0,
                              window.getSize().x, window.getSize().y));
 
@@ -75,7 +75,8 @@ int main(){
 
 
 
-    /*sf::SoundBuffer buffer;
+    /*
+    sf::SoundBuffer buffer;
     buffer.loadFromFile("res/attack.ogg");
     sf::Sound stepsound;
     stepsound.setBuffer(buffer);
@@ -100,22 +101,23 @@ int main(){
 
 
 
-    std::vector < sf::Texture > m_textures(27);
-    std::vector < sf::Sprite > m_sprites(27);
+    std::vector < sf::Texture > m_textures(32);
+    std::vector < sf::Sprite > m_sprites(32);
     std::string name = "res/tree/tree";
 
 
-    for(int treeIndex = 0; treeIndex < 27; ++treeIndex){
-        //m_textures.emplace_back(sf::Texture());
+    for(int treeIndex = 0; treeIndex <= 27; ++treeIndex){
         m_textures[treeIndex].loadFromFile(name+std::to_string(treeIndex)+".png");
-        //m_sprites.emplace_back(sf::Sprite());
         m_sprites[treeIndex].setTexture(m_textures[treeIndex]);
     }
+    m_sprites[28].setTexture(m_textures[27]);
+    m_sprites[29].setTexture(m_textures[27]);
 
     bool introDone = false;
     bool animationChanged = true;
-    int currentTreeIndex = 0;
-    textBoxManager->displayText(m_textos[currentTreeIndex]);
+    int currentTreeIndex = 26;
+    int currentTextIndex = currentTreeIndex;
+    textBoxManager->displayText(m_textos[currentTextIndex]);
 	while(window.isOpen()){
         animationChanged = false;
         //TODO
@@ -141,8 +143,9 @@ int main(){
                     if(textBoxManager->getState() == EtextBoxManagerState::Hidden)
                     {
                         animationChanged = true;
-                        ++currentTreeIndex;
-                        textBoxManager->displayText(m_textos[currentTreeIndex]);
+                        currentTreeIndex = std::min(29, currentTreeIndex +1);
+                        currentTextIndex = std::min(int(m_textos.size()-1), currentTextIndex+1);
+                        textBoxManager->displayText(m_textos[currentTextIndex]);
 //                    textBoxManager->displayText("Because I'm an excelent penguin! Because I'm an excelent penguin! Because I'm an excelent penguin! and I will always be!!!, Because I'm an excelent penguin! Because I'm an excelent penguin! Because I'm an excelent penguin! and I will always be!!!");
                     }
                 }
@@ -153,8 +156,9 @@ int main(){
                     if(textBoxManager->getState() == EtextBoxManagerState::Hidden)
                     {
                         animationChanged = true;
-                        ++currentTreeIndex;
-                        textBoxManager->displayText(m_textos[currentTreeIndex]);
+                        currentTreeIndex = std::min(29, currentTreeIndex +1);
+                        currentTextIndex = std::min(int(m_textos.size()-1), currentTextIndex+1);
+                        textBoxManager->displayText(m_textos[currentTextIndex]);
 //                    textBoxManager->displayText("Because I'm an excelent penguin! Because I'm an excelent penguin! Because I'm an excelent penguin! and I will always be!!!, Because I'm an excelent penguin! Because I'm an excelent penguin! Because I'm an excelent penguin! and I will always be!!!");
                     }
                 }
@@ -238,25 +242,6 @@ int main(){
 
         textBoxManager->draw(window);
 
-
-/*        for(int i = 0; i < bgs.size(); ++i){
-            window.draw(bgs[i]);
-        }
-*/
-
-//        window.draw(STUF);
-
-/*
-            window.setView(window.getDefaultView());
-            window.clear(c);
-            window.draw(endS);
- */
-
-
-        /*text.setString(
-                    std::to_string(2)
-                    );*/
-//        window.draw(text);
         window.display();
 
 	}

@@ -1,5 +1,6 @@
 #include "TextBoxManager.hpp"
 #include <iostream>
+#include <cmath>
 
 #define MOVINGSPEED 1000
 

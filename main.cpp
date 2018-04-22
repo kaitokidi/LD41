@@ -115,7 +115,7 @@ int main(){
 
     bool introDone = false;
     bool animationChanged = true;
-    int currentTreeIndex = 26;
+    int currentTreeIndex = 0;
     int currentTextIndex = currentTreeIndex;
     textBoxManager->displayText(m_textos[currentTextIndex]);
 	while(window.isOpen()){
@@ -139,7 +139,7 @@ int main(){
                 if (event.key.code == sf::Keyboard::Escape) {
                     window.close();
                 }
-                if (event.key.code == sf::Keyboard::N) {
+                if (event.key.code == sf::Keyboard::Space) {
                     if(textBoxManager->getState() == EtextBoxManagerState::Hidden)
                     {
                         animationChanged = true;
@@ -151,7 +151,7 @@ int main(){
                 }
             case sf::Event::TouchEnded:
             {
-                sf::Vector2f touchPos = sf::Vector2f(event.touch.x,event.touch.y);
+                /*sf::Vector2f touchPos = sf::Vector2f(event.touch.x,event.touch.y);
                 if(m_sprites[currentTreeIndex].getGlobalBounds().contains(touchPos)){
                     if(textBoxManager->getState() == EtextBoxManagerState::Hidden)
                     {
@@ -161,7 +161,7 @@ int main(){
                         textBoxManager->displayText(m_textos[currentTextIndex]);
 //                    textBoxManager->displayText("Because I'm an excelent penguin! Because I'm an excelent penguin! Because I'm an excelent penguin! and I will always be!!!, Because I'm an excelent penguin! Because I'm an excelent penguin! Because I'm an excelent penguin! and I will always be!!!");
                     }
-                }
+                }*/
             }
                 //Default
 				default:
